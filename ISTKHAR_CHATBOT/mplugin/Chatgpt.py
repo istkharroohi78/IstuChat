@@ -28,7 +28,8 @@ async def call_openrouter(messages: list) -> str:
     raise Exception("All AI Keys Failed.")
 
 # --- THE SEAMLESS HANDLER (Text + Image) ---
-@Client.on_message(filters.text & ~filters.bot)
+# YAHAN DHYAN DEIN: group=1 laga diya gaya hai!
+@Client.on_message(filters.text & ~filters.bot, group=1)
 async def seamless_ai_handler(client: Client, message):
     user_input = message.text
     is_group = message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]
@@ -119,3 +120,10 @@ async def seamless_ai_handler(client: Client, message):
     history.append({"role": "assistant", "content": ai_reply})
     await save_user_context(user_id, history)
     await message.reply_text(ai_reply, quote=True)
+
+# --- Memory Reset Command ---
+@Client.on_message(filters.command(["reset", "history"], prefixes=[".", "/"]))
+async def reset_command_handler(client, message):
+    user_id = message.from_user.id
+    await reset_user_context(user_id)
+    await message.reply_text("🧠 **Chat History Cleared!**\n\nMeri memory fresh ho gayi hai. Boliye, main aapki kya madad kar sakta hoon? ap ko jada janna h to join kegia - @betabot_support")

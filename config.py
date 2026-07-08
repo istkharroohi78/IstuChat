@@ -3,33 +3,48 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# ==========================================
+# 1. FLAT VARIABLES (For Old Files like userbot.py)
+# ==========================================
+API_ID = int(os.getenv("API_ID", "6435225"))
+API_HASH = os.getenv("API_HASH", "4e984ea35f854762dcde906dce426c2d")
+BOT_TOKEN = os.getenv("BOT_TOKEN", None)
+STRING1 = os.getenv("STRING_SESSION", None)
+
+OWNER_ID = int(os.getenv("OWNER_ID", "8418584090"))
+SUPPORT_GRP = "betabot_support"
+UPDATE_CHNL = "betabot_hub"
+OWNER_USERNAME = "ll_DEVIL_KING_ll"
+
+# Advanced V2 Keys
+_openrouter_keys = [
+    os.getenv("OPENROUTER_KEY_1", ""),
+    os.getenv("OPENROUTER_KEY_2", ""),
+    os.getenv("OPENROUTER_KEY_3", "")
+]
+OPENROUTER_KEYS = [key for key in _openrouter_keys if key]
+
+_mongo_urls = [
+    os.getenv("MONGO_URL", ""),
+    os.getenv("MONGO_URL_2", ""),
+    os.getenv("MONGO_URL_3", "")
+]
+MONGO_URLS = [url for url in _mongo_urls if url]
+
+
+# ==========================================
+# 2. CLASS VARIABLES (For New V2 Files like Chatgpt.py)
+# ==========================================
 class Config:
-    # Aapki provided details (Hardcoded & .env variables)
-    API_ID = int(os.getenv("API_ID", "6435225"))
-    API_HASH = os.getenv("API_HASH", "4e984ea35f854762dcde906dce426c2d")
-    BOT_TOKEN = os.getenv("BOT_TOKEN", None)
-    STRING1 = os.getenv("STRING_SESSION", None)
+    API_ID = API_ID
+    API_HASH = API_HASH
+    BOT_TOKEN = BOT_TOKEN
+    STRING1 = STRING1
     
-    # Owner & Support Details
-    OWNER_ID = int(os.getenv("OWNER_ID", "7995626429"))
-    SUPPORT_GRP = "ARISHFA_UPDATE"
-    UPDATE_CHNL = "THUNDERDEVS"
-    OWNER_USERNAME = "ll_ISTKHAR_BABY_lll"
-
-    # --- ADVANCED V2 FEATURES BELOW ---
-
-    # OpenRouter API Keys (3 Keys for Auto-Fallback)
-    OPENROUTER_KEYS = [
-        os.getenv("OPENROUTER_KEY_1", ""),
-        os.getenv("OPENROUTER_KEY_2", ""),
-        os.getenv("OPENROUTER_KEY_3", "")
-    ]
-    OPENROUTER_KEYS = [key for key in OPENROUTER_KEYS if key]
+    OWNER_ID = OWNER_ID
+    SUPPORT_GRP = SUPPORT_GRP
+    UPDATE_CHNL = UPDATE_CHNL
+    OWNER_USERNAME = OWNER_USERNAME
     
-    # MongoDB Load Balancing (Primary + 2 Extras)
-    MONGO_URLS = [
-        os.getenv("MONGO_URL", ""),     # Aapka primary URL
-        os.getenv("MONGO_URL_2", ""),   # Load balancer URL 2
-        os.getenv("MONGO_URL_3", "")    # Load balancer URL 3
-    ]
-    MONGO_URLS = [url for url in MONGO_URLS if url]
+    OPENROUTER_KEYS = OPENROUTER_KEYS
+    MONGO_URLS = MONGO_URLS

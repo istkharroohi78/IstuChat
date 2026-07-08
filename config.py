@@ -12,8 +12,8 @@ BOT_TOKEN = os.getenv("BOT_TOKEN", None)
 STRING1 = os.getenv("STRING_SESSION", None)
 
 OWNER_ID = int(os.getenv("OWNER_ID", "7995626429"))
-SUPPORT_GRP = "ARISHFA_UPDATE"
-UPDATE_CHNL = "THUNDERDEVS"
+SUPPORT_GRP = "betabot_hub"
+UPDATE_CHNL = "betabot_hub"
 OWNER_USERNAME = "ll_ISTKHAR_BABY_lll"
 
 # Yeh line purani files ko crash hone se bachayegi

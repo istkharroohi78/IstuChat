@@ -28,7 +28,8 @@ async def call_openrouter(messages: list) -> str:
     raise Exception("All OpenRouter API Keys Failed.")
 
 # --- THE ULTIMATE SEAMLESS HANDLER (Text + Image + Fonts) ---
-@Client.on_message(filters.text & ~filters.bot)
+# YAHAN DHYAN DEIN: group=1 laga diya gaya hai taaki yeh purani files ko bypass kare!
+@Client.on_message(filters.text & ~filters.bot, group=1)
 async def seamless_ai_handler(client: Client, message):
     user_input = message.text
     is_group = message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]

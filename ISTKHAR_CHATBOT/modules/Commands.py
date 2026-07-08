@@ -1,7 +1,6 @@
 import random
 import os
 import shutil
-from MukeshAPI import api
 from pymongo import MongoClient
 from pyrogram import Client, filters
 from pyrogram.errors import MessageEmpty
@@ -35,7 +34,6 @@ translator = GoogleTranslator()
 lang_db = db.ChatLangDb.LangCollection
 status_db = db.chatbot_status_db.status
 
-
 @ISTKHAR_CHATBOT.on_message(
     filters.command(["restart"]) & filters.user(int(OWNER_ID))
 )
@@ -68,7 +66,6 @@ async def set_language(client: Client, message: Message):
         reply_markup=generate_language_buttons(languages)
     )
 
-
 @ISTKHAR_CHATBOT.on_message(filters.command("status"))
 async def status_command(client: Client, message: Message):
     chat_id = message.chat.id
@@ -79,21 +76,11 @@ async def status_command(client: Client, message: Message):
     else:
         await message.reply("No status found for this chat.")
 
-
-@ISTKHAR_CHATBOT.on_message(filters.command(["lang", "language", "setlang"]))
-async def set_language(client: Client, message: Message):
-    await message.reply_text(
-        "Please select your chat language:",
-        reply_markup=generate_language_buttons(languages)
-    )
-
-
 @ISTKHAR_CHATBOT.on_message(filters.command(["resetlang", "nolang"]))
 async def reset_language(client: Client, message: Message):
     chat_id = message.chat.id
     lang_db.update_one({"chat_id": chat_id}, {"$set": {"language": "nolang"}}, upsert=True)
     await message.reply_text("**Bot language has been reset in this chat to mix language.**")
-
 
 @ISTKHAR_CHATBOT.on_message(filters.command("chatbot"))
 async def chatbot_command(client: Client, message: Message):

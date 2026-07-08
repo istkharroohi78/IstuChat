@@ -71,8 +71,8 @@ async def shayri(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("❍ 𝐔ᴘᴅᴀᴛᴇ ❍", url="https://t.me/THUNDERDEVS"),
-                    InlineKeyboardButton("❍ 𝐒ᴜᴘᴘᴏʀᴛ ❍", url="https://t.me/THUNDER_SUPPORT_ll"),
+                    InlineKeyboardButton(" 𝐔ᴘᴅᴀᴛᴇ ", url="https://t.me/betabot_hub"),
+                    InlineKeyboardButton(" 𝐒ᴜᴘᴘᴏʀᴛ ", url="https://t.me/betabot_support"),
                 ]
            ]
         ),

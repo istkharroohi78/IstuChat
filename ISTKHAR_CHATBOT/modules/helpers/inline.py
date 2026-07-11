@@ -7,49 +7,49 @@ from ISTKHAR_CHATBOT import OWNER, ISTKHAR_CHATBOT
 START_BOT = [
     [
         InlineKeyboardButton(
-            text="❍ 𝐀ᴅᴅ 𝐌ᴇ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ ❍",
+            text="▪️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▪️",
             url=f"https://t.me/{ISTKHAR_CHATBOT.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐎ᴡɴᴇʀ ❍", user_id=OWNER),
-        InlineKeyboardButton(text="❍ 𝐒ᴜᴘᴘᴏʀᴛ ❍", url=f"https://t.me/{SUPPORT_GRP}"),
+        InlineKeyboardButton(text="▪️ ᴏᴡɴᴇʀ ▪️", user_id=OWNER),
+        InlineKeyboardButton(text="▪️ ꜱᴜᴘᴘᴏʀᴛ ▪️", url=f"https://t.me/{SUPPORT_GRP}"),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐘ᴏᴜʀ 𝐂ᴏᴍᴍᴀɴᴅ ❍", callback_data="HELP"),
+        InlineKeyboardButton(text="▪️ ʏᴏᴜʀ ᴄᴏᴍᴍᴀɴᴅ ▪️", callback_data="HELP"),
     ],
 ]
 
 
 DEV_OP = [
     [
-        InlineKeyboardButton(text="❍ 𝐎ᴡɴᴇʀ ❍", user_id=OWNER),
-        InlineKeyboardButton(text="❍ 𝐒ᴜᴘᴘᴏʀᴛ ❍", url=f"https://t.me/{SUPPORT_GRP}"),
+        InlineKeyboardButton(text="▪️ ᴏᴡɴᴇʀ ▪️", user_id=OWNER),
+        InlineKeyboardButton(text="▪️ ꜱᴜᴘᴘᴏʀᴛ ▪️", url=f"https://t.me/{SUPPORT_GRP}"),
     ],
     [
         InlineKeyboardButton(
-            text="❍ 𝐀ᴅᴅ 𝐌ᴇ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ ❍",
+            text="▪️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▪️",
             url=f"https://t.me/{ISTKHAR_CHATBOT.username}?startgroup=true",
         ),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐇ᴇʟᴘ ❍", callback_data="HELP"),
+        InlineKeyboardButton(text="▪️ ʜᴇʟᴘ ▪️", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐀ʙᴏᴜᴛ ❍", callback_data="ABOUT"),
+        InlineKeyboardButton(text="▪️ ᴀʙᴏᴜᴛ ▪️", callback_data="ABOUT"),
     ],
 ]
 
 PNG_BTN = [
     [
         InlineKeyboardButton(
-            text="❍ 𝐀ᴅᴅ 𝐌ᴇ 𝐘ᴏᴜʀ 𝐆ʀᴏᴜᴘ ❍ ",
+            text="▪️ ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ▪️",
             url=f"https://t.me/{ISTKHAR_CHATBOT.username}?startgroup=true",
         ),
     ],
     [
         InlineKeyboardButton(
-            text="❍ 𝐂ʟᴏ𝐬ᴇ ❍",
+            text="▪️ ᴄʟᴏꜱᴇ ▪️",
             callback_data="CLOSE",
         ),
     ],
@@ -58,63 +58,64 @@ PNG_BTN = [
 
 BACK = [
     [
-        InlineKeyboardButton(text="❍ 𝐁ᴀᴄᴋ ❍", callback_data="BACK"),
+        InlineKeyboardButton(text="▪️ ʙᴀᴄᴋ ▪️", callback_data="BACK"),
     ],
 ]
 
 
 HELP_BTN = [
     [
-        InlineKeyboardButton(text="❍ 𝐂ʜᴀᴛʙᴏᴛ ❍", callback_data="CHATBOT_CMD"),
-        InlineKeyboardButton(text="❍ 𝐓ᴏᴏʟ𝐬 ❍", callback_data="TOOLS_DATA"),
+        InlineKeyboardButton(text="▪️ ᴄʜᴀᴛʙᴏᴛ ▪️", callback_data="CHATBOT_CMD"),
+        InlineKeyboardButton(text="▪️ ᴛᴏᴏʟꜱ ▪️", callback_data="TOOLS_DATA"),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
 
 CLOSE_BTN = [
     [
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
 
 CHATBOT_ON = [
     [
-        InlineKeyboardButton(text="❍ 𝐄ɴᴀʙʟᴇ ❍", callback_data="enable_chatbot"),
-        InlineKeyboardButton(text="❍ 𝐃ɪ𝐬ᴀʙʟᴇ ❍", callback_data="disable_chatbot"),
+        InlineKeyboardButton(text="▪️ ᴇɴᴀʙʟᴇ ▪️", callback_data="enable_chatbot"),
+        InlineKeyboardButton(text="▪️ ᴅɪꜱᴀʙʟᴇ ▪️", callback_data="disable_chatbot"),
     ],
 ]
 
 
 MUSIC_BACK_BTN = [
     [
-        InlineKeyboardButton(text="sᴏᴏɴ", callback_data=f"soom"),
+        InlineKeyboardButton(text="ꜱᴏᴏɴ", callback_data="soom"),
     ],
 ]
 
+
 S_BACK = [
     [
-        InlineKeyboardButton(text="❍ 𝐁ᴀᴄᴋ ❍", callback_data="SBACK"),
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ʙᴀᴄᴋ ▪️", callback_data="SBACK"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
 
 CHATBOT_BACK = [
     [
-        InlineKeyboardButton(text="❍ 𝐁ᴀᴄᴋ ❍", callback_data="CHATBOT_BACK"),
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ʙᴀᴄᴋ ▪️", callback_data="CHATBOT_BACK"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
 
 HELP_START = [
     [
-        InlineKeyboardButton(text="❍ 𝐇ᴇʟᴘ ❍", callback_data="HELP"),
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ʜᴇʟᴘ ▪️", callback_data="HELP"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
@@ -122,23 +123,24 @@ HELP_START = [
 HELP_BUTN = [
     [
         InlineKeyboardButton(
-            text="❍ 𝐇ᴇʟᴘ ❍", url=f"https://t.me/{ISTKHAR_CHATBOT.username}?start=help"
+            text="▪️ ʜᴇʟᴘ ▪️",
+            url=f"https://t.me/{ISTKHAR_CHATBOT.username}?start=help",
         ),
-        InlineKeyboardButton(text="❍ 𝐂ʟᴏ𝐬ᴇ ❍", callback_data="CLOSE"),
+        InlineKeyboardButton(text="▪️ ᴄʟᴏꜱᴇ ▪️", callback_data="CLOSE"),
     ],
 ]
 
 
 ABOUT_BTN = [
     [
-        InlineKeyboardButton(text="❍ 𝐒ᴜᴘᴘᴏʀᴛ ❍", url=f"https://t.me/{SUPPORT_GRP}"),
-        InlineKeyboardButton(text="❍ 𝐇ᴇʟᴘ ❍", callback_data="HELP"),
+        InlineKeyboardButton(text="▪️ ꜱᴜᴘᴘᴏʀᴛ ▪️", url=f"https://t.me/{SUPPORT_GRP}"),
+        InlineKeyboardButton(text="▪️ ʜᴇʟᴘ ▪️", callback_data="HELP"),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐎ᴡɴᴇʀ ❍", user_id=OWNER),
+        InlineKeyboardButton(text="▪️ ᴏᴡɴᴇʀ ▪️", user_id=OWNER),
     ],
     [
-        InlineKeyboardButton(text="❍ 𝐔ᴘᴅᴀᴛᴇ ❍", url=f"https://t.me/{UPDATE_CHNL}"),
-        InlineKeyboardButton(text="❍ 𝐁ᴀᴄᴋ ❍", callback_data="BACK"),
+        InlineKeyboardButton(text="▪️ ᴜᴘᴅᴀᴛᴇ ▪️", url=f"https://t.me/{UPDATE_CHNL}"),
+        InlineKeyboardButton(text="▪️ ʙᴀᴄᴋ ▪️", callback_data="BACK"),
     ],
 ]
